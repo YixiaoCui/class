@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 交替口译
+date: 2026-08-24 12:02:00 +0800
 permalink: /posts/2026-fall-consecutive-interpreting/
 ---
 
