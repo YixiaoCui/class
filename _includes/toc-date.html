@@ -1,0 +1,46 @@
+<div class="book-summary">
+  <script type="text/javascript">
+    function pageScrollToTop(element) {
+      $('div.body-inner').animate({scrollTop: 0});
+      $(element).parent().find('li>ul>li').removeClass('active');
+      return true;
+    }
+  </script>
+
+  <nav role="navigation">
+    <div id="book-search-input" role="search">
+      <input type="text" placeholder="Type to search" />
+    </div>
+    <div id="book-search-input-link" role="search">
+      <a href="{{ site.baseurl }}/assets/search.html">Click to Search</a>
+    </div>
+
+    <ul class="summary">
+      <li class="chapter{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" data-level="1" data-path="{{ site.baseurl }}/">
+        <a href="{{ site.baseurl }}/" onclick="pageScrollToTop(this)">{{ site.title | escape }}</a>
+      </li>
+
+      <li class="divider"></li>
+
+      <li class="chapter{% if page.url == '/posts/2026-fall/' %} active{% endif %}" data-level="2" data-path="{{ site.baseurl }}/posts/2026-fall/">
+        <a href="{{ site.baseurl }}/posts/2026-fall/" onclick="pageScrollToTop(this)">2026秋季学期</a>
+        <ul class="articles">
+          <li class="chapter{% if page.url == '/posts/2026-fall-ielts/' %} active{% endif %}" data-level="2.1" data-path="{{ site.baseurl }}/posts/2026-fall-ielts/">
+            <a href="{{ site.baseurl }}/posts/2026-fall-ielts/" onclick="pageScrollToTop(this)">雅思</a>
+            {% if page.url == '/posts/2026-fall-ielts/' and site.toc.enabled %}{% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}{% endif %}
+          </li>
+          <li class="chapter{% if page.url == '/posts/2026-fall-consecutive-interpreting/' %} active{% endif %}" data-level="2.2" data-path="{{ site.baseurl }}/posts/2026-fall-consecutive-interpreting/">
+            <a href="{{ site.baseurl }}/posts/2026-fall-consecutive-interpreting/" onclick="pageScrollToTop(this)">交替口译</a>
+            {% if page.url == '/posts/2026-fall-consecutive-interpreting/' and site.toc.enabled %}{% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}{% endif %}
+          </li>
+          <li class="chapter{% if page.url == '/posts/2026-fall-cat/' %} active{% endif %}" data-level="2.3" data-path="{{ site.baseurl }}/posts/2026-fall-cat/">
+            <a href="{{ site.baseurl }}/posts/2026-fall-cat/" onclick="pageScrollToTop(this)">计算机辅助翻译</a>
+            {% if page.url == '/posts/2026-fall-cat/' and site.toc.enabled %}{% include toc.html html=content h_min=site.toc.h_min h_max=site.toc.h_max %}{% endif %}
+          </li>
+        </ul>
+      </li>
+
+      <li class="divider"></li>
+    </ul>
+  </nav>
+</div>
