@@ -1,0 +1,19 @@
+title: Scarlett老师的课堂主页
+longtitle: Scarlett老师的课堂主页
+author: 崔宜笑
+description: 东南大学外国语学院课程讲义、课件与学习资源
+version: 1.0
+gitbook_version: 3.2.3
+url: https://yixiaocui.github.io
+baseurl: /class
+remote_theme: sighingnow/jekyll-gitbook
+plugins:
+  - jekyll-remote-theme
+markdown: kramdown
+syntax_highlighter_style: colorful
+toc:
+  enabled: true
+  h_min: 1
+  h_max: 3
+permalink: /posts/:year-:month-:day-:title/
+
